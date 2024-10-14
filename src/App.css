@@ -1,0 +1,211 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header and Navbar */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+nav {
+  background-color: #004080;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #0066cc;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('./pages/images/hotel-banner.jpeg'); /* Example hotel banner image */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Booking Form */
+/* Booking Form Styling */
+.booking-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Adjusted to avoid overlap */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures proper wrap on smaller screens */
+}
+
+.booking-form input, .booking-form select {
+  flex-grow: 1; /* Flexible width for input fields */
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  min-width: 150px; /* Prevents fields from being too small */
+}
+
+.booking-form select {
+  width: auto; /* Allows the select field to expand based on its content */
+}
+
+.booking-form input[type="submit"] {
+  background-color: #004080;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  width: auto;
+  margin-left: 5px;
+  flex-grow: 0;
+}
+
+.booking-form input[type="submit"]:hover {
+  background-color: #003366;
+}
+
+
+/* Room Display */
+.rooms {
+  margin-top: 40px;
+}
+
+.room-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.room-card img {
+  width: 100%;
+  height: auto;
+}
+
+.room-card-content {
+  padding: 20px;
+}
+
+.room-card h3 {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.room-card p {
+  margin-bottom: 10px;
+}
+
+.room-card .price {
+  font-size: 1.5rem;
+  color: #e67e22;
+  margin-top: 10px;
+}
+
+.room-card .btn {
+  background-color: #004080;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.room-card .btn:hover {
+  background-color: #003366;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  .booking-form {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .booking-form input, .booking-form select {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+  .rooms {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+}
+
